@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import Link from "next/link";
 import "./globals.css";
 
@@ -11,6 +12,30 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const formaDjr = localFont({
+  src: "./fonts/FormaDJRDisplay-Medium-Testing.woff2",
+  variable: "--font-forma-djr",
+  weight: "500",
+  display: "swap",
+});
+
+const avantGarde = localFont({
+  src: [
+    {
+      path: "./fonts/ITC-Avant-Garde-Gothic-Std-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./fonts/ITC-Avant-Garde-Gothic-Std-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-avant-garde",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +51,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${formaDjr.variable} ${avantGarde.variable} antialiased`}
     >
       <body className="min-h-screen flex flex-col bg-slate-50 text-slate-900">
         <header className="p-6 bg-slate-900 text-white shadow-md">
