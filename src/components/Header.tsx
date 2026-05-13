@@ -16,7 +16,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="w-full bg-[#5D45A5] pt-8 pb-6 relative z-50">
+    <header className="sticky top-0 left-0 w-full bg-[#5740C0] pt-8 pb-6 z-50">
       <nav className="flex justify-between items-center max-w-[1240px] mx-auto w-full px-[20px] md:px-0">
         <Link href="/" className="flex-shrink-0">
           <img src="/gruds-logo.svg" alt="Grubs Electric Ltd." width={150} height={61} className="w-[150px] h-auto" />
