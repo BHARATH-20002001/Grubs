@@ -58,7 +58,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${formaDjr.variable} ${avantGarde.variable} antialiased`}
     >
-      <body className="min-h-screen flex flex-col bg-slate-50 text-slate-900 font-sans">
+      <body className="min-h-screen flex flex-col bg-background text-slate-900 font-sans">
         <Header />
         <main className="flex-grow flex flex-col w-full">{children}</main>
         <footer className="p-6 bg-slate-900 text-slate-400 text-center text-sm">
