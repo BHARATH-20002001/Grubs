@@ -60,7 +60,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="max-w-[1240px] mx-auto w-full px-[20px] md:px-0 flex flex-col md:flex-row items-center justify-between relative z-10">
+      <div className="max-w-[1240px] mx-auto w-full px-[20px] md:px-0 flex flex-col md:flex-row items-center justify-between relative z-30">
 
         {/* ── Left Side: Text ── */}
         <div ref={textRef} className="w-full md:w-1/2 flex flex-col items-start text-left text-white mb-16 md:mb-0 px-0 relative z-10">
@@ -122,7 +122,7 @@ export default function Hero() {
       </div>
 
       {/* S-curve wave — overflow-hidden only here, not on the whole section */}
-      <div className="absolute bottom-0 left-0 w-full leading-none z-20 overflow-hidden">
+      <div className="absolute bottom-0 left-0 w-full leading-none z-20 overflow-hidden pointer-events-none">
         <svg
           viewBox="0 0 1440 200"
           xmlns="http://www.w3.org/2000/svg"
@@ -131,9 +131,29 @@ export default function Hero() {
         >
           <path
             d="M0,100 C360,-120 1080,320 1440,85 L1440,200 L0,200 Z"
-            fill="#f0ece4"
+            fill="#F7EDE8"
           />
         </svg>
+      </div>
+
+      {/*
+        ── Floating circles ──
+        Placed HERE in the Hero (not in Services) so it sits above the
+        S-curve wave (z-30 > wave z-20) and naturally straddles the
+        hero/services boundary — top half over the purple, bottom half
+        over the cream, exactly as in the design.
+
+        bottom-0 + translate-y-[40%] pushes it so ~60% is above the
+        wave edge and ~40% bleeds into the Services section below.
+        right-5 md:right-10 keeps it flush with the right edge.
+      */}
+      <div className="absolute bottom-0 right-5 md:right-10 z-30 pointer-events-none translate-y-[40%] w-[140px] md:w-[200px]">
+        <img
+          src="/floating-circles.png"
+          alt=""
+          aria-hidden="true"
+          className="w-full h-auto object-contain"
+        />
       </div>
     </section>
   );
