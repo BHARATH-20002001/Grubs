@@ -86,7 +86,7 @@ export default function Services() {
   const displayedServices = showAll ? services : services.slice(0, 3);
 
   return (
-    <section ref={containerRef} className="pb-32 bg-[#F7EDE8] relative" id="services">
+    <section ref={containerRef} className="pb-40 md:pb-80 bg-[#F7EDE8] relative" id="services">
 
       <div className="max-w-[1240px] mx-auto px-0 relative z-10">
 
