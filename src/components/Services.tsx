@@ -38,13 +38,13 @@ const services = [
     title: "Industrial Solutions",
     description: "Complete electrical infrastructure and industrial automation services tailored for large-scale production facilities and power grids.",
     image: "/service-industrial.png",
-    href: "/industrial",
+    href: "/electrical",
   },
   {
     title: "24/7 Emergency Support",
     description: "Rapid response electrical and technical assistance available around the clock to ensure your operations never stop.",
     image: "/service-emergency.png",
-    href: "/emergency",
+    href: "/electrical",
   },
 ];
 

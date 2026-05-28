@@ -8,7 +8,8 @@ export default function Footer() {
   const isHome = pathname === "/";
   const isSearchRescue = pathname === "/search-rescue";
   const isDrones = pathname === "/drones";
-  const hasShortTransition = isSearchRescue || isDrones;
+  const isElectrical = pathname === "/electrical";
+  const hasShortTransition = isSearchRescue || isDrones || isElectrical;
 
   return (
     <footer className={`relative w-full overflow-visible z-10 ${isHome ? 'mt-auto' : (hasShortTransition ? 'mt-[80px] md:mt-[300px]' : 'mt-[300px]')}`}>
