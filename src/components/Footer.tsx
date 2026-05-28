@@ -6,9 +6,12 @@ import { usePathname } from "next/navigation";
 export default function Footer() {
   const pathname = usePathname();
   const isHome = pathname === "/";
+  const isSearchRescue = pathname === "/search-rescue";
+  const isDrones = pathname === "/drones";
+  const hasShortTransition = isSearchRescue || isDrones;
 
   return (
-    <footer className={`relative w-full overflow-visible z-10 ${isHome ? 'mt-auto' : 'mt-[300px]'}`}>
+    <footer className={`relative w-full overflow-visible z-10 ${isHome ? 'mt-auto' : (hasShortTransition ? 'mt-[80px] md:mt-[300px]' : 'mt-[300px]')}`}>
       {/* ── S-Curve Top Transition ───────────────────────────────────────── */}
       {!isHome && (
         <div

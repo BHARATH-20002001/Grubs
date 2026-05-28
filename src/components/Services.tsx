@@ -14,37 +14,37 @@ const services = [
     title: "Drones",
     description: "Grubs is your eye in the sky. We use the latest in thermal drone technology to help you with aerial missions. From search and rescue to surveying land, we'll give you the bigger picture.",
     image: "/service-drones.png",
-    href: "/services/drones",
+    href: "/drones",
   },
   {
     title: "Solar Energy",
     description: "Better for the environment and better for your budget, solar panels are a future-proof solution for both homes and businesses.",
     image: "/service-solar.png",
-    href: "/services/solar",
+    href: "/solar-energy",
   },
   {
     title: "Electrical",
     description: "The complex is made simple with Grubs' all-round electrical expertise. We're here to provide you with solutions for even your most difficult problems.",
     image: "/service-electrical.png",
-    href: "/services/electrical",
+    href: "/electrical",
   },
   {
     title: "Search & Rescue",
     description: "Rugged and reliable Search & Rescue operations using advanced thermal imaging and high-precision aerial support for critical missions.",
     image: "/service-search.png",
-    href: "/services/search-and-rescue",
+    href: "/search-rescue",
   },
   {
     title: "Industrial Solutions",
     description: "Complete electrical infrastructure and industrial automation services tailored for large-scale production facilities and power grids.",
     image: "/service-industrial.png",
-    href: "/services/industrial",
+    href: "/industrial",
   },
   {
     title: "24/7 Emergency Support",
     description: "Rapid response electrical and technical assistance available around the clock to ensure your operations never stop.",
     image: "/service-emergency.png",
-    href: "/services/emergency",
+    href: "/emergency",
   },
 ];
 
