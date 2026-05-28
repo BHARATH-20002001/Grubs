@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-export default function Hero() {
+export default function DroneHero() {
   const containerRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
   const droneRef = useRef<HTMLImageElement>(null);
@@ -42,11 +42,10 @@ export default function Hero() {
   }, []);
 
   return (
-    // No overflow-hidden on section — lets the bg SVG breathe freely
     <section
       ref={containerRef}
-      className="relative w-full pt-12 pb-48"
-      style={{ backgroundColor: "#5740C0" }}
+      className="relative w-full pt-12 pb-48 flex-grow"
+      style={{ backgroundColor: "#6CB345" }}
     >
       {/* Banner background SVG — anchored right so it never crops on the left */}
       <div
@@ -65,14 +64,14 @@ export default function Hero() {
         {/* ── Left Side: Text ── */}
         <div ref={textRef} className="w-full md:w-1/2 flex flex-col items-start text-left text-white mb-16 md:mb-0 px-0 relative z-10">
           <h1 className="hero-text font-forma text-6xl md:text-7xl lg:text-8xl font-medium leading-[1.1] mb-6">
-            Grubs <br />
-            Electric Ltd.
+            The Eye in  <br />
+            the Sky
           </h1>
           <p className="hero-text font-avant text-lg md:text-xl font-bold mb-10 tracking-wide">
-            Your reliable 24hr service team!
+            A high-powered solution for <br />inspections and search and rescue
           </p>
 
-          <button className="hero-text font-avant font-bold bg-[#73C04A] hover:bg-[#62A83D] transition-colors text-white py-4 px-8 flex items-center gap-3 rounded-sm shadow-lg text-lg">
+          <button className="hero-text font-avant font-bold bg-[#5740C0] hover:bg-[#4834A2] transition-colors text-white py-4 px-8 flex items-center gap-3 rounded-sm shadow-lg text-lg">
             Contact Us
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
               <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
@@ -141,20 +140,10 @@ export default function Hero() {
         </svg>
       </div>
 
-      {/*
-        ── Floating circles ──
-        Placed HERE in the Hero (not in Services) so it sits above the
-        S-curve wave (z-30 > wave z-20) and naturally straddles the
-        hero/services boundary — top half over the purple, bottom half
-        over the cream, exactly as in the design.
-
-        bottom-0 + translate-y-[40%] pushes it so ~60% is above the
-        wave edge and ~40% bleeds into the Services section below.
-        right-5 md:right-10 keeps it flush with the right edge.
-      */}
+      {/* Floating circles */}
       <div className="absolute bottom-0 right-5 md:right-10 z-30 pointer-events-none translate-y-[40%] w-[140px] md:w-[200px]">
         <img
-          src="/floating-circles.png"
+          src="/drones-hero-floating-img.png"
           alt=""
           aria-hidden="true"
           className="w-full h-auto object-contain"

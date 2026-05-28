@@ -42,6 +42,15 @@ export default function About() {
       className="relative z-10 w-full pt-0 lg:pt-0 pb-32 mt-0 md:mt-15"
       style={{ backgroundColor: "#5740C0" }}
     >
+      {/* 24hr Service Badge in the top right (as shown in the screenshot) */}
+      <div className="absolute -top-16 md:-top-24 lg:-top-45 right-[5%] md:right-[10%] lg:right-[16%] z-30">
+        <img
+          src="/24-service.png"
+          alt="24hr Service"
+          className="w-24 h-24 md:w-36 md:h-36 lg:w-[240px] lg:h-[240px] object-contain"
+        />
+      </div>
+
       {/* ── S-Curve Top Transition ─────────────────────────────────────────
           Positioned at top:0, then pushed UP by ~100% of its own height
           so it bleeds into the section above (#F7EDE8) with the exact
@@ -69,35 +78,50 @@ export default function About() {
 
         {/* Left Side: Image with mask */}
         <div className="w-full md:w-1/2 flex justify-center items-center relative" ref={imgRef}>
+          {/* Banner background SVG */}
+          <div className="absolute inset-0 z-0 pointer-events-none flex justify-center items-center scale-125">
+            <img
+              src="/about-bg-bg.png"
+              alt=""
+              aria-hidden="true"
+              className="w-70 h-150 md:w-[200px] md:h-[200px] lg:w-100 lg:h-[380px] object-contain"
+            />
+          </div>
           {/* Green Blob */}
-          <div
-            className="absolute bottom-4 left-4 md:bottom-8 md:left-8 w-28 h-28 md:w-40 md:h-40 bg-[#73C04A] z-0"
-            style={{ borderRadius: "64% 36% 27% 73% / 55% 58% 42% 45%" }}
+          <img
+            src="/about-color-circle.png"
+            alt=""
+            className="absolute -bottom-20 left-4 md:-bottom-28 md:left-8 w-28 h-28 md:w-40 md:h-40 z-10 object-contain"
           />
           <div
-            className="relative z-10 w-[330px] h-[330px] lg:w-[480px] lg:h-[480px] overflow-hidden"
+            className="relative z-20 w-[330px] h-[330px] lg:w-[480px] lg:h-[480px] ml-0 md:-ml-30 overflow-hidden"
             style={{
-              maskImage: "url('/banner-mask.png')",
-              WebkitMaskImage: "url('/banner-mask.png')",
+              maskImage: "url('/about-section-mask.png')",
+              WebkitMaskImage: "url('/about-section-mask.png')",
               maskSize: "contain",
               WebkitMaskSize: "contain",
               maskRepeat: "no-repeat",
               WebkitMaskRepeat: "no-repeat",
-              maskPosition: "center",
+              maskPosition: "center left",
               WebkitMaskPosition: "center",
             }}
           >
             <img
-              src="/homepage-banner-img.png"
+              src="/about-bg-bg.png"
+              alt="Background"
+              className="absolute inset-0 w-full h-full object-cover z-0"
+            />
+            <img
+              src="/aboutus-main-img.png"
               alt="About Grubs Electric"
-              className="w-full h-full object-cover"
+              className="relative z-10 w-full h-full object-cover"
             />
           </div>
         </div>
 
         {/* Right Side: Text */}
         <div ref={textRef} className="w-full md:w-1/2 flex flex-col items-start text-left text-white mt-12 md:mt-0 px-5 lg:px-0">
-          <h2 className="about-text font-forma text-5xl md:text-6xl lg:text-7xl font-medium mb-6">
+          <h2 className="about-text font-forma text-5xl md:text-7xl font-medium mb-6">
             About
           </h2>
           <h3 className="about-text font-forma text-2xl md:text-3xl lg:text-4xl font-medium mb-8">
